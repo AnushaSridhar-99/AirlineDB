@@ -11,11 +11,11 @@
 	<title>AIRLINE DATABASE</title>
 </head>
 <body>
-	<header>AVION AIRLINES</header>
-	<nav class="navbar navbar-inverse">
+	<header>ABC AIRLINES</header>
+	<nav class="navbar navbar-inverse" id="n1">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">AVION</a>
+      <a class="navbar-brand" href="#">ABC</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="doctor.html">Home</a></li>
@@ -23,7 +23,7 @@
       <li><a href="">Manage Booking</a></li>
       <li><a href="">Offers</a></li>
       <li><a href="">Contact</a></li>
-      <li><a href="#"></a>Services</li>
+      <li><a href="#">Services</a></li>
      </ul>
   </div>
 </nav><br>
@@ -60,13 +60,13 @@
     <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
   </form>
 </div>
-<div><button id="b2" onclick="openForm3()" type="submit" class="btn btn-primary btn-block">AGENCY LOGIN</button></div><br>
+<div><button id="b2" onclick="openForm3()" type="submit" class="btn btn-primary btn-block">AGENT LOGIN</button></div><br>
 
  <div class="form-popup" id="myForm3">
   <form action="/action_page.php" class="form-container">
 
-    <label for="agencyname"><b>Agency name</b></label>
-    <input type="text" placeholder="Enter Agency name" name="agency" required><br>
+    <label for="agentname"><b>Agent name</b></label>
+    <input type="text" placeholder="Enter Agent name" name="agent" required><br>
 
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
@@ -75,6 +75,8 @@
     <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
   </form>
 </div>
+    <a href="">Sign up?</a><br>
+    <a href="">Forgot Password</a>
 </div>
 </body>
 </html>
