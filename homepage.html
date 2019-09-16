@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="airline.css">
+	<script type="text/javascript" src="airline.js"></script>
+	<title>AIRLINE DATABASE</title>
+</head>
+<body>
+	<header>AVION AIRLINES</header>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">AVION</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="doctor.html">Home</a></li>
+      <li><a href="#">Tickets</a></li>
+      <li><a href="">Manage Booking</a></li>
+      <li><a href="">Offers</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="#"></a>Services</li>
+     </ul>
+  </div>
+</nav><br>
+	<div id="d1" align="form-popup">
+		<h1>Login</h1>
+   		<div><button id="b2" onclick="openForm1()" type="submit" class="btn btn-primary btn-block">USER LOGIN</button></div><br>
+   		
+   		
+   
+   	 <div class="form-popup" id="myForm1">
+  <form action="/action_page.php" class="form-container">
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter User name" name="user" required><br>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeFor1()">Close</button>
+  </form>
+</div>
+<div><button id="b2" onclick="openForm2()" type="submit" class="btn btn-primary btn-block">ADMIN LOGIN</button></div><br>
+ <div class="form-popup" id="myForm2">
+  <form action="/action_page.php" class="form-container">
+
+    <label for="adminname"><b>Admin name</b></label>
+    <input type="text" placeholder="Enter Admin name" name="admin" required><br>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+  </form>
+</div>
+<div><button id="b2" onclick="openForm3()" type="submit" class="btn btn-primary btn-block">AGENCY LOGIN</button></div><br>
+
+ <div class="form-popup" id="myForm3">
+  <form action="/action_page.php" class="form-container">
+
+    <label for="agencyname"><b>Agency name</b></label>
+    <input type="text" placeholder="Enter Agency name" name="agency" required><br>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
+  </form>
+</div>
+</div>
+</body>
+</html>
