@@ -4,11 +4,13 @@
 	width: 30%;
 	text-align: center;
 	margin: auto;
+  background-color: white;
+  border-radius: 10px;
 }
 header{
 	background-color: #4CAF50;
 	color: black;
-	font-family: sans-serif;
+	font-family: cursive;
 	font-size: 50px;
 	align-content: center;
 	text-align: center;
@@ -28,16 +30,18 @@ h1{
 
 }
 .form-popup {
+  background-color: white;
   display: none;
   position: fixed;
   bottom: 100px;
   left: 32%;
   border: 3px solid #f1f1f1;
+  border-radius: 5px;
   z-index: 9;
 }
 .form-container {
   max-width: 500px;
-  padding: 10px;
+  padding: 70px;
   background-color: white;
 }
 .form-container input[type=text] {
@@ -60,28 +64,35 @@ h1{
 .form-container .btn {
   background-color: #4CAF50;
   color: white;
-  padding: 16px 20px;
+  padding: 12px 20px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
+  width: 38%;
   opacity: 0.8;
+}
+.form-container .btn:hover{
+  color: black;
 }
 .form-container .btncancel{
   background-color: indianred;
   color: white;
-  padding: 16px 20px;
+  padding: 12px 20px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
+  width: 38%;
   opacity: 0.8;
+}
+.form-container .btncancel:hover{
+  color: red;
 }
 .btn{
    background-color: #4CAF50;
   color: white;
   padding: 16px 5px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   width: 100%;
   margin-bottom:1px;
