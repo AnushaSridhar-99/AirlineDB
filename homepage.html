@@ -17,22 +17,21 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">AVION</a>
     </div>
+    <div class="tab">
     <ul class="nav navbar-nav">
       <li class="active"><a>Home</a></li>
-      <li><a href="#">Tickets</a></li>
-      <li><a href="">Manage Booking</a></li>
-      <li><a href="">Offers</a></li>
-      <li><a href="">Contact</a></li>
-      <li><a href="#">Services</a></li>
+      <li class="navv"><a href="#">Tickets</a></li>
+      <li class="navv"><a href="">Manage Booking</a></li>
+      <li class="navv"><a href="">Offers</a></li>
+      <li class="navv"><a href="">Contact</a></li>
+      <li class="navv"><a href="#">Services</a></li>
      </ul>
+   </div>
   </div>
 </nav><br>
 	<div id="d1" align="form-popup">
 		<h1>Login</h1>
-   		<div><button id="b2" onclick="openForm1()" type="submit" class="btn btn-primary btn-block">USER LOGIN</button></div><br>
-   		
-   		
-   
+   		<div><button class="btn" onclick="openForm1()" type="submit" class="btn btn-primary btn-block">USER LOGIN</button></div><br>
    	 <div class="form-popup" id="myForm1">
   <form action="/action_page.php" class="form-container">
 
@@ -43,10 +42,10 @@
     <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+    <button type="button" class="btncancel" onclick="closeForm1()">Close</button>
   </form>
 </div>
-<div><button id="b2" onclick="openForm2()" type="submit" class="btn btn-primary btn-block">ADMIN LOGIN</button></div><br>
+<div><button class="btn" onclick="openForm2()" type="submit" class="btn btn-primary btn-block">ADMIN LOGIN</button></div><br>
  <div class="form-popup" id="myForm2">
   <form action="/action_page.php" class="form-container">
 
@@ -57,10 +56,10 @@
     <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+    <button type="button" class="btncancel" onclick="closeForm2()">Close</button>
   </form>
 </div>
-<div><button id="b2" onclick="openForm3()" type="submit" class="btn btn-primary btn-block">AGENT LOGIN</button></div><br>
+<div><button class="btn" onclick="openForm3()" type="submit" class="btn btn-primary btn-block">AGENT LOGIN</button></div><br>
 
  <div class="form-popup" id="myForm3">
   <form action="/action_page.php" class="form-container">
@@ -72,7 +71,7 @@
     <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
+    <button type="button" class="btncancel" onclick="closeForm3()">Close</button>
   </form>
 </div>
     <a href="">Sign up?</a><br>
