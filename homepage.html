@@ -9,16 +9,7 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	<script type="text/javascript" src="airline.js"></script>
   <style>
-    body{
-      background-image: url("C:\Users\91876\Desktop\DBMS PROJECT\background.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100%;
-      background-blend-mode: luminosity;
-      font-family: 'Roboto';
-
-    }
+  
   </style>
 	<title>AIRLINE DATABASE</title>
 </head>
@@ -86,7 +77,21 @@
     <button type="button" class="btncancel" onclick="closeForm3()">Close</button>
   </form>
 </div>
-    <a href="">Sign up?</a><br>
+    <a onclick="Signup()" href="">Sign up?</a><br>
+    <div class="form-popup" id="myForm4" >
+  <form method="post" action="demo2.php" class="form-container">
+
+    <label for="username"><b>User name</b></label>
+    <input type="text" placeholder="Enter user name" name="user" required><br>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit" name="submit" class="btn">Sign up</button>
+    <button type="button" class="btncancel" onclick="closeForm4()">Close</button>
+  </form>
+</div>
+ 
     <a href="">Forgot Password</a>
 </div>
 </body>
