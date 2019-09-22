@@ -13,14 +13,15 @@
 	<script type="text/javascript" src="airline.js"></script>
   <style>
     body{
-      image
+      background-size: cover;
+      opacity: 0.8;
     }
   </style>
-
+  
 	<title>AIRLINE DATABASE</title>
 </head>
 
-<body>
+<body background="538085.jpg">
 	<header>AVION AIRLINES</header>
 	
   <nav class="navbar navbar-inverse" id="n1">
@@ -35,58 +36,15 @@
       <li class="navv"><a href="">Manage Booking</a></li>
       <li class="navv"><a href="">Offers</a></li>
       <li class="navv"><a href="">Contact</a></li>
-      <li class="navv"><a href="#">Services</a></li>
+      <li class="navv"><a href="">Services</a></li>
+      <li class="navv"><a href="login.html">Login</a></li>
      </ul>
    </div>
   </div>
 </nav><br>
-
-
-	<div id="d1" align="form-popup">
-		<h1>Login</h1>
-
-
-   		<div><button class="btn" onclick="openForm1()" type="submit" class="btn btn-primary btn-block">USER LOGIN</button></div><br>
-
-<!--popup login form for users -->
-
-   	 <div class="form-popup" id="myForm1">
-  <form action="/action_page.php" class="form-container">
-
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter User name" name="user" required><br>
-
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btncancel" onclick="closeForm1()">Close</button>
-  </form>
-</div>
-
-
-<div><button class="btn" onclick="openForm2()" type="submit" class="btn btn-primary btn-block">AGENT LOGIN</button></div><br>
-
-
-<!--popup login form for agents -->
-
- <div class="form-popup" id="myForm2">
-  <form action="/action_page.php" class="form-container">
-
-    <label for="agentname"><b>Agent name</b></label>
-    <input type="text" placeholder="Enter Agent name" name="agent" required><br>
-
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btncancel" onclick="closeForm2()">Close</button>
-  </form>
-</div>
-
-    <a href="demo2.html">Sign up?</a><br>
-    <!--signup page -->
-    <a href="">Forgot Password</a>
-</div>
+  <div>
+    FROM: <input type="text" name="from" required><br>
+    TO: <input type="text" name="to" required>
+  </div>
 </body>
 </html>
