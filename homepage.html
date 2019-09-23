@@ -16,7 +16,23 @@
       background-size: cover;
       opacity: 0.8;
       background-repeat: no-repeat;
+      font-family: Roboto;
     }
+    .flight{
+      width: 30%;
+      margin-left: 30px;
+      border-radius: 10px;
+    }
+    .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 45%;
+  opacity: 0.8;
+}
   </style>
   
 	<title>AIRLINE DATABASE</title>
@@ -43,9 +59,15 @@
    </div>
   </div>
 </nav><br>
-  <div>
+  <div class="flight"><pre>
+    <input type="radio" name="trip" value="Oneway">One way    <input type="radio" name="trip" value="Roundtrip">Round trip<br>
     FROM: <input type="text" name="from" required><br>
-    TO: <input type="text" name="to" required>
+    TO:   <input type="text" name="to" required><br>
+    DEPARTURE DATE: <input type="date" name="depdate"><br>
+    RETURN DATE: <input type="date" name="retdate"><br>
+    PASSENGERS: <input type="text" name="passcount"><br>
+    <button type="submit" class="btn">CHECK FLIGHTS</button>
+  </pre>
   </div>
 </body>
 </html>
