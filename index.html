@@ -17,17 +17,16 @@ body, html {
 
 .bg-image {
   /* The image used */
-  background-image: url("photographer.jpg");
+  background-image: url("479484.jpg");
   
   /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
   
   /* Full height */
   height: 100%; 
   
   /* Center and scale the image nicely */
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -46,13 +45,9 @@ body, html {
   z-index: 2;
   width: 60%;
   padding: 20px;
-  
+  font-weight: bold;
   font-size: 20px;
-  margin-top: 30px;
-}
-.navbar_header{
-	font-size: 35px;
-	text-align: right;
+  margin-top: 70px;
 }
 .ab{
 	color: black;
@@ -70,9 +65,12 @@ body, html {
   cursor: pointer;
   width: 45%;
 }
+.form-fillup{
+	color: white;
+}
 </style>
 </head>
-<body background="364283.jpg">
+<body>
 	<div class="container">
 		<div class="row">
 	<div class="col-md-7">
@@ -84,7 +82,7 @@ body, html {
       <a class="nav-link ab" href="#">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link ab" href="#">Tickets</a>
+      <a class="nav-link ab" href="#">Bookings</a>
     </li>
     <li class="nav-item">
       <a class="nav-link ab" href="#">Login</a>
@@ -101,13 +99,16 @@ body, html {
 </div>
 <div class="bg-image"></div>
 
-<div class="bg-text"><pre>
+<div class="bg-text">
+	<form class="form-fillup"><pre>
    <input type="radio" name="trip" value="Oneway">One way    <input type="radio" name="trip" value="Roundtrip">Round trip<br>
     FROM: <input type="text" name="from" required><br>
     TO:   <input type="text" name="to" required><br>
     DEPARTURE DATE: <input id="dateInput" type="date" name="depdate"><br>
     RETURN DATE:    <input id="dateInput" type="date" name="retdate"><br>
         <button type="submit" class="btn">CHECK FLIGHTS</button>
+    </pre>
+</form>
     <script>
     let dateInput = document.getElementById('dateInput');
  
