@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AVION AIRLINES</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("photographer.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60%;
+  padding: 20px;
+  
+  font-size: 20px;
+  margin-top: 30px;
+}
+.navbar_header{
+	font-size: 35px;
+	text-align: right;
+}
+.ab{
+	color: black;
+	font-size: 30px;
+}
+.para{
+	font-size: 55px;
+}
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 45%;
+}
+</style>
+</head>
+<body background="364283.jpg">
+	<div class="container">
+		<div class="row">
+	<div class="col-md-7">
+<nav class="navbar navbar-expand-sm sticky-top">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link ab" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link ab" href="#">Tickets</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link ab" href="#">Login</a>
+    </li>
+   	
+    
+  </ul>
+
+</nav>
+</div>
+<div class="col-md-5" align="right">
+	<p class="para">AVION</p></div>
+</div>
+</div>
+<div class="bg-image"></div>
+
+<div class="bg-text"><pre>
+   <input type="radio" name="trip" value="Oneway">One way    <input type="radio" name="trip" value="Roundtrip">Round trip<br>
+    FROM: <input type="text" name="from" required><br>
+    TO:   <input type="text" name="to" required><br>
+    DEPARTURE DATE: <input id="dateInput" type="date" name="depdate"><br>
+    RETURN DATE:    <input id="dateInput" type="date" name="retdate"><br>
+        <button type="submit" class="btn">CHECK FLIGHTS</button>
+    <script>
+    let dateInput = document.getElementById('dateInput');
+ 
+ const cur_date = new Date();
+ const cur_month = cur_date.getMonth() > 9 ? cur_date.getMonth() + 1 : '0' + (cur_date.getMonth() + 1);
+ const cur_day = cur_date.getDate() > 9 ? cur_date.getDate() : '0' + cur_date.getDate();
+  
+ const dateStr = cur_date.getFullYear() + '-' + cur_month + '-' + cur_day;
+  
+ dateInput.setAttribute('min', dateStr);
+  </script>
+</div>
+</body>
+</html>

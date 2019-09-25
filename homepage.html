@@ -14,7 +14,6 @@
   <style>
     body{
       background-size: cover;
-      opacity: 0.8;
       background-repeat: no-repeat;
       font-family: Roboto;
     }
@@ -31,9 +30,9 @@
   border-radius: 8px;
   cursor: pointer;
   width: 45%;
-  opacity: 0.8;
 }
   </style>
+  
   
 	<title>AIRLINE DATABASE</title>
 </head>
@@ -63,10 +62,20 @@
     <input type="radio" name="trip" value="Oneway">One way    <input type="radio" name="trip" value="Roundtrip">Round trip<br>
     FROM: <input type="text" name="from" required><br>
     TO:   <input type="text" name="to" required><br>
-    DEPARTURE DATE: <input type="date" name="depdate"><br>
-    RETURN DATE: <input type="date" name="retdate"><br>
-    PASSENGERS: <input type="text" name="passcount"><br>
-    <button type="submit" class="btn">CHECK FLIGHTS</button>
+    DEPARTURE DATE: <input id="dateInput" type="date" name="depdate"><br>
+    RETURN DATE:    <input id="dateInput1" type="date" name="retdate"><br>
+        <button type="submit" class="btn">CHECK FLIGHTS</button>
+    <script>
+    let dateInput = document.getElementById('dateInput');
+ 
+ const cur_date = new Date();
+ const cur_month = cur_date.getMonth() > 9 ? cur_date.getMonth() + 1 : '0' + (cur_date.getMonth() + 1);
+ const cur_day = cur_date.getDate() > 9 ? cur_date.getDate() : '0' + cur_date.getDate();
+  
+ const dateStr = cur_date.getFullYear() + '-' + cur_month + '-' + cur_day;
+  
+ dateInput.setAttribute('min', dateStr);
+</script>
   </pre>
   </div>
 </body>
