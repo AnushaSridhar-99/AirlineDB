@@ -18,7 +18,7 @@
       font-family: Roboto;
     }
     .flight{
-      width: 30%;
+      width: 35%;
       margin-left: 30px;
       border-radius: 10px;
     }
@@ -31,6 +31,14 @@
   cursor: pointer;
   width: 45%;
 }
+input[type = text], input[type = date]{
+  width: 55%;
+  height: auto;
+  border: 0.5px solid #B9B9BA;
+  padding: 10px;
+
+}
+
   </style>
   
   
@@ -53,7 +61,24 @@
       <li class="navv"><a href="">Offers</a></li>
       <li class="navv"><a href="">Contact</a></li>
       <li class="navv"><a href="">Services</a></li>
-      <li class="navv"><a href="login.html">Login</a></li>
+      <li class="navv"><a onclick="openForm1()">Login</a></li>
+      <div class="form-popup" id="myForm1">
+  <form class="form-container">
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter User name" name="user" required><br>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btncancel" onclick="closeForm1()">Close</button><br><br>
+    
+    <a href="demo2.html">Sign up?</a><br>
+    <!--signup page -->
+    <a href="">Forgot Password</a>
+  </form>
+</div>
      </ul>
    </div>
   </div>
@@ -63,7 +88,7 @@
     FROM: <input type="text" name="from" required><br>
     TO:   <input type="text" name="to" required><br>
     DEPARTURE DATE: <input id="dateInput" type="date" name="depdate"><br>
-    RETURN DATE:    <input id="dateInput1" type="date" name="retdate"><br>
+    RETURN DATE:    <input id="dateInput" type="date" name="retdate"><br>
         <button type="submit" class="btn">CHECK FLIGHTS</button>
     <script>
     let dateInput = document.getElementById('dateInput');

@@ -9,63 +9,81 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
 	<style>
+		body{
+			background-size: cover;
+			background-repeat: no-repeat;	
+		}
 		form
 		{
-			padding-top: 5px;
 			text-align: center;
 			font-size: 30px; 
+			color: black;
+			margin-left: 270px;
 		}
-		input
-		{
-			width: 240px;
-			height: 40px;
-			font-size: 30px;
-		}
-		.form-fillup{
-			border: 2px solid  black;
-			border-radius: 10px;
-			width: 40%;
-			margin: auto;
-			padding: 2px 5px 10px 5px;
-		}
-		input[type=text] {
-		  	width: 70%;
-   			padding: 10px;
-            margin: auto;
-            border: 1px solid grey;
-            border-radius: 10px;
-            background: #e1e1e1;
-        }
-        input[type=password] {
-            width: 70%;
-            padding: 10px;
-            margin: auto;
-            border: 1px solid grey;
- 			border-radius: 10px;
- 			background: #e1e1e1;
-		}
+		 .flight{
+      width: 50%;
+      margin-left: 400px;
+      margin-top: 30px;
+      border-radius: 10px;
+
+       }
+		
+		input[type = text], input[type = password]{
+  width: 55%;
+  height: auto;
+  border: 0.5px solid #B9B9BA;
+  padding: 10px;
+
+}
+.para{
+	font-size: 85px;
+	margin-left: 40px;
+}
+
+       
 		input[type=submit]{
 			background-color: #4CAF50;
-  			color: white;
+  			color: black;
   			padding: 1px 5px;
   			border: none;
   			border-radius: 8px;
   			cursor: pointer;
   			width: 30%;
  			margin-bottom:1px;
- 			opacity: 0.8;
+ 			
 		}
-	</style>
-</head>
-<body>
-	<div class="form-fillup">
-	<form method="post" action="demo2.php" >
-		<h1>SIGNUP</h1>
-		Username : <input type="text" name="username"> <br><br>
-		Password : <input type="password" name="password"><br><br>
-		<input type="submit" name="submit">
-	</form>
+		h2{
+			text-align: center;
+		}
+		.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 38%;
+  opacity: 0.8;
+}
 
+	</style>
+
+</head>
+<body background="364283.jpg">
+	<div class="col-md-5" align="margin-left">
+	<p class="para">AVION</p></div>
+    <form method="post" action="signup.php">
+	<div class="flight"><pre>
+            		       <h2>SIGN UP</h2>
+   
+    USERNAME:  <input type="text" name="from" required><br>
+    PASSWORD:  <input type="password" name="to" required><br>
+    FIRSTNAME: <input type="text" name="firstname" required><br>
+    LASTNAME:  <input type="text" name="lastname" required><br>
+    CONTACT:   <input type="text" name="contact" required><br>
+        <button type="submit" class="btn">Sign up</button>
+    </pre>
 </div>
+</form>
 </body>
 </html>

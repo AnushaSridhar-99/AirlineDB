@@ -31,12 +31,13 @@ h1{
 
 }
 .form-popup {
+ 
   background-color: white;
   display: none;
   position: fixed;
   bottom: 100px;
   left: 32%;
-  border: 3px solid #f1f1f1;
+  border: 3px solid #B9B9BA;
   border-radius: 5px;
   z-index: 9;
 }
@@ -86,7 +87,8 @@ h1{
   opacity: 0.8;
 }
 .form-container .btncancel:hover{
-  color: red;
+  color: black;
+  background-color: indianred;
 }
 .btn{
    background-color: #4CAF50;
