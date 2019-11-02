@@ -1,21 +1,12 @@
-#d1{
-	border: 2px solid red;
-	padding: 10px;
-	width: 30%;
-	text-align: center;
-	margin: auto;
-  background-color: white;
-  border-radius: 10px;
-}
+
 header{
 	background-color: indianred;
 	color: black;
-	font-family: cursive;
 	font-size: 50px;
 	align-content: center;
 	text-align: center;
   opacity: 0.8;
-  font-family: 'Roboto';
+
 }
 h1{
 	background-color:white;
@@ -39,7 +30,7 @@ h1{
   left: 32%;
   border: 3px solid #B9B9BA;
   border-radius: 5px;
-  z-index: 9;
+<!-- dc dx-->
 }
 .form-container {
   max-width: 500px;

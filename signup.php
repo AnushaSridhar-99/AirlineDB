@@ -1,15 +1,25 @@
 <?php
 
 include 'connection.php';
- $username = $_POST["from"];
- $password = $_POST["to"];
+
+//declare variables
+ $username = $_POST["username"];
+ $password = $_POST["password"];
  $firstname = $_POST["firstname"];
  $lastname = $_POST["lastname"];
  $contact = $_POST["contact"];
 
+//store query in a variable
  $query = "select * from users where username ='$username'";
- $exec = mysqli_query($conn,$query);  //execute the query stored in variable $query and store result in variable $exec
- $result = mysqli_num_rows($exec); // return number of rows
+
+
+  //execute the query stored in variable $query and store result in variable $exec
+ $exec = mysqli_query($conn,$query); 
+
+// return number of rows
+
+ $result = mysqli_num_rows($exec); 
+
  if($result == 1){
  	echo "user already exists";
  }
@@ -18,5 +28,4 @@ include 'connection.php';
  	$exec1 = mysqli_query($conn,$query1);
  	echo "user created";
  }
-
 ?>

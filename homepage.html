@@ -21,6 +21,7 @@
       width: 35%;
       margin-left: 30px;
       border-radius: 10px;
+      margin-top: 1px;
     }
     .btn {
   background-color: #4CAF50;
@@ -31,21 +32,30 @@
   cursor: pointer;
   width: 45%;
 }
-input[type = text], input[type = date]{
+input[type = date]{
   width: 55%;
   height: auto;
   border: 0.5px solid #B9B9BA;
   padding: 10px;
+  border-radius: 5px;
+}
+#city{
+  width: 55%;
+  height: auto;
+  border: 0.5px solid #B9B9BA;
+  padding: 10px;
+  border-radius: 5px;
 
 }
-
-  </style>
-  
-  
+.para{
+  text-align: center;
+  font-family: Roboto;
+  font-size: 30px;
+}
+  </style> 
 	<title>AIRLINE DATABASE</title>
 </head>
-
-<body background="538085.jpg">
+<body background="674925.jpg">
 	<header>AVION AIRLINES</header>
 	
   <nav class="navbar navbar-inverse" id="n1">
@@ -58,18 +68,18 @@ input[type = text], input[type = date]{
       <li class="active"><a>Home</a></li>
       <li class="navv"><a href="tickets.html">Tickets</a></li>
       <li class="navv"><a href="">Manage Booking</a></li>
-      <li class="navv"><a href="">Offers</a></li>
+      <li class="navv"><a href="offers.html">Offers</a></li>
       <li class="navv"><a href="">Contact</a></li>
       <li class="navv"><a href="">Services</a></li>
       <li class="navv"><a onclick="openForm1()">Login</a></li>
       <div class="form-popup" id="myForm1">
-  <form class="form-container">
+  <form class="form-container" action="login.php" method="post">
 
     <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter User name" name="user" required><br>
+    <input type="text" placeholder="User name" name="user" required><br>
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input type="password" placeholder="Password" name="password" required>
 
     <button type="submit" class="btn">Login</button>
     <button type="button" class="btncancel" onclick="closeForm1()">Close</button><br><br>
@@ -84,13 +94,27 @@ input[type = text], input[type = date]{
   </div>
 </nav><br>
   <div class="flight"><pre>
-    <input type="radio" name="trip" value="Oneway">One way    <input type="radio" name="trip" value="Roundtrip">Round trip<br>
-    FROM: <input type="text" name="from" required><br>
-    TO:   <input type="text" name="to" required><br>
+    <p class="para">BOOK A TICKET</p>
+    <form method="post" action="flights.php">    FROM:  <select id="city" name="from">
+              <option value="">--</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Mumbai">Mumbai</option>
+            </select><br>
+    TO:    <select id="city" name="to">
+              <option value="">--</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Mumbai">Mumbai</option>
+            </select><br>
     DEPARTURE DATE: <input id="dateInput" type="date" name="depdate"><br>
-    RETURN DATE:    <input id="dateInput" type="date" name="retdate"><br>
         <button type="submit" class="btn">CHECK FLIGHTS</button>
-    <script>
+    
+            <script>
     let dateInput = document.getElementById('dateInput');
  
  const cur_date = new Date();
@@ -102,6 +126,7 @@ input[type = text], input[type = date]{
  dateInput.setAttribute('min', dateStr);
 </script>
   </pre>
+</form>
   </div>
 </body>
 </html>
