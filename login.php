@@ -5,26 +5,23 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      $myusername = $_POST['username'];
+      $mypassword = $_POST['password']; 
       
-      $sql = "SELECT username FROM users WHERE username = '$myusername' and passcode = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
+      $sql = "SELECT username FROM users WHERE username = '$myusername' and password = '$mypassword'";
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_assoc($result);
       $count = mysqli_num_rows($result);
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
       if($count == 1) {
-         session_register("myusername");
          $_SESSION['login_user'] = $myusername;
          
          header("location: welcome.php");
       }else {
-         echo "Your Login Name or Password is invalid";
-      }
+         $message = "Invalid username or password!";
+         echo "<script type='text/javascript'>alert('$message');</script>";      }
    }
 ?>
 <html>
@@ -37,6 +34,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-origin: all;
+            font-family: sans-serif;
          }
         
          .form1 {
@@ -106,7 +104,7 @@ b{
   <form class="form-container" action="" method="post">
 
     <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="User name" name="username" required><br>
+    <input type="text" placeholder="Username" name="username" required><br>
 
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Password" name="password" required>
