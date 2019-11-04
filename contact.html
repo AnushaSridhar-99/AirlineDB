@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script type="text/javascript" src="1.js"></script>
+    <link rel="stylesheet" type="text/css" href="1.css">
+    <style>
+        header {
+            background-color: indianred;
+            color: black;
+            font-size: 50px;
+            align-content: center;
+            text-align: center;
+        }
+
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Roboto;
+        }
+
+        .try {
+            float: left;
+            margin: 140px;
+            padding-top: 0px;
+        }
+
+        .div1 {
+            float: right;
+            padding-right: 0px;
+        }
+
+        .div2 {
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+            animation: square 3s infinite alternate linear;
+        }
+
+        @keyframes square {
+            0% {
+                border-radius: 0 0 0 0;
+                background-color: coral;
+                transform: rotate(0deg);
+            }
+
+            25% {
+                border-radius: 50% 0 0 0;
+                background-color: deeppink;
+                transform: rotate(45deg);
+            }
+
+            50% {
+                border-radius: 50% 50% 0 0;
+                background-color: lightpink;
+                transform: rotate(90deg);
+            }
+
+            75% {
+                border-radius: 50% 50% 50% 0;
+                background-color: hotpink;
+                transform: rotate(135deg);
+            }
+
+            100% {
+                border-radius: 50% 50% 50% 50%;
+                background-color: slateblue;
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body background="offers.jpg">
+    <header>AVION AIRLINES</header>
+
+    <nav class="navbar navbar-inverse" id="n1">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand active" href="#">AVION</a>
+            </div>
+            <div class="tab">
+                <ul class="nav navbar-nav">
+                    <li class="navv"><a href="1.html">Home</a></li>
+                    <li class="navv"><a href="tickets.html">Tickets</a></li>
+                    <li class="navv"><a href="offers.html">Offers</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                    <li class="navv"><a onclick="openForm1()">Login</a></li>
+                    <div class="form-popup" id="myForm1">
+                        <form class="form-container" action="login.php" method="post">
+
+                            <label for="username"><b>Username</b></label>
+                            <input type="text" placeholder="User name" name="user" required><br>
+
+                            <label for="password"><b>Password</b></label>
+                            <input type="password" placeholder="Password" name="password" required>
+
+                            <button type="submit" class="btn">Login</button>
+                            <button type="button" class="btncancel" onclick="closeForm1()">Close</button><br><br>
+
+                            <a href="signup.html">Sign up?</a><br>
+                            <!--signup page -->
+                            <a href="">Forgot Password</a>
+                        </form>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="try">
+        <h2 style="color:deeppink;text-align:left;">
+            Stop by and say "hi"  OR  drop us a note
+        </h2>
+
+        <div class="ro">
+            <h2>Registered Office</h2>
+            <h4>Central Wing, Ground Floor, Thapar House, 124, Janpath, New Delhi – 110001 India.</h4>
+
+        </div>
+        <br>
+        <div class="co">
+            <h2>Corporate Office</h2>
+            <h4>Level 1, Tower C, Global Business Park, Mehrauli-Gurgaon Road, Gurgaon – 122 002, Haryana, India.</h4>
+
+        </div>
+        <br>
+
+        <div class="cs">
+            <h2>Customer Support</h2>
+            <h3>+91-9999988888</h3>
+            <h3>+91-8888899999</h3>
+        </div>
+
+        <div class="div1">
+            <div class="div2"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
