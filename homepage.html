@@ -6,8 +6,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="airline.css">
-
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <style>
     body{
@@ -15,32 +13,36 @@
       background-repeat: no-repeat;
       font-family: Roboto;
       background-attachment: fixed;
-
-    }
+      
+     }
     .flight{
-      width: 35%;
-      margin-left: 710px;
-      border-radius: 10px;
-      backface-visibility: 
+      width: 65%;
+      margin-left: 365px;
+      border-radius: 10px; 
+      margin-top: 40px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      font-family: Roboto;
     }
     .btn {
-  background-color: #4CAF50;
+  background-color: grey;
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   cursor: pointer;
-  width: 45%;
+  width: 25%;
+  margin-left: 225px;
 }
-input[type = date]{
-  width: 55%;
+  input[type = date]{
+  width: 28%;
   height: auto;
   border: 0.5px solid #B9B9BA;
   padding: 10px;
   border-radius: 5px;
 }
 #city{
-  width: 55%;
+  width: 28%;
   height: auto;
   border: 0.5px solid #B9B9BA;
   padding: 10px;
@@ -48,54 +50,62 @@ input[type = date]{
 
 }
 .para{
-  text-align: center;
-  font-family: Roboto;
-  font-size: 30px;
+  font-size: 85px;
+  margin-left: 30px;
+  color: white;
 }
+li{
+  display: inline-block;
+  font-family: Roboto;
+  font-size: 20px;
+  padding: 20px 10px 20px 10px;
+  margin-top: 25px;
+}
+a{
+  color: black;
+}
+img{
+  width: 25px;
+  height: auto;
+
+}
+
   </style> 
 	<title>AIRLINE DATABASE</title>
 </head>
 <body background="images/185289.jpg">
-	<header>AVION AIRLINES</header>
-	
-  <nav class="navbar navbar-inverse" id="n1">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">AVION</a>
-    </div>
-    <div class="tab">
-    <ul class="nav navbar-nav">
-      <li class="active"><a>Home</a></li>
-      <li class="navv"><a href="tickets.html">Tickets</a></li>
-      <li class="navv"><a href="">Manage Booking</a></li>
-      <li class="navv"><a href="offers.html">Offers</a></li>
-      <li class="navv"><a href="">Contact</a></li>
-      <li class="navv"><a href="">Services</a></li>
-      <li class="navv"><a href="login.php">Login</a></li>
+  <div>
+<div class="col-md-6" align="margin-left">
+  <p class="para">AVION</p></div>
+  <div class="col-md-6" align="margin-right">
+    <ul>
+      <li><a>Home</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="login.php">Login</a></li>
      
      </ul>
-   </div>
   </div>
-</nav><br>
+</div>
+  <br><br><br><br><br>
   <div class="flight"><pre>
-    <p class="para">BOOK A TICKET</p>
-    <form method="post" action="flights.php">    FROM:  <select id="city" name="from">
+    <form method="post" action="flights.php">    FROM:                             TO:                            DEPARTURE DATE:
+      <br>    <select id="city" name="from">
               <option value="">--</option>
               <option value="Bangalore">Bangalore</option>
               <option value="Delhi">Delhi</option>
               <option value="Hyderabad">Hyderabad</option>
               <option value="Gujarat">Gujarat</option>
               <option value="Mumbai">Mumbai</option>
-            </select><br>
-    TO:    <select id="city" name="to">
+            </select> <img src="images/arrow.jpg"> <select id="city" name="to">
               <option value="">--</option>
               <option value="Bangalore">Bangalore</option>
               <option value="Delhi">Delhi</option>
               <option value="Hyderabad">Hyderabad</option>
               <option value="Gujarat">Gujarat</option>
               <option value="Mumbai">Mumbai</option>
-            </select><br>
-    DEPARTURE DATE: <input id="dateInput" type="date" name="depdate"><br>
+            </select>  <input id="dateInput" type="date" name="depdate"><br>
         <button type="submit" class="btn">CHECK FLIGHTS</button>
     
             <script>

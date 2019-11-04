@@ -21,7 +21,8 @@
          header("location: welcome.php");
       }else {
          $message = "Invalid username or password!";
-         echo "<script type='text/javascript'>alert('$message');</script>";      }
+         echo "<script type='text/javascript'>alert('$message');</script>"; 
+        }
    }
 ?>
 <html>
@@ -35,6 +36,7 @@
             background-repeat: no-repeat;
             background-origin: all;
             font-family: sans-serif;
+            
          }
         
          .form1 {
@@ -69,9 +71,6 @@
   background: #f1f1f1;
   border-radius: 5px;
 }
-#n1{
-  background-color: #444444;
-}
 .form-container .btn {
   background-color: #4CAF50;
   color: white;
@@ -86,10 +85,10 @@
   color: black;
 }
 a{
-   color: white;
+  color: black;
 }
-b{
-   color: white;
+#myForm1{
+  margin-left: 250px;
 }
 
       </style>
