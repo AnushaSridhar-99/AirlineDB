@@ -22,10 +22,12 @@
 		 $message = "Record saved successfully";
          echo "<script type='text/javascript'>alert('$message');</script>";  
      }
-	else 
+	else {
 		$message = "Record not saved";
          echo "<script type='text/javascript'>alert('$message');</script>";  
 	}
+	
+}
 
 ?>
 
