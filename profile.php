@@ -11,11 +11,8 @@
          background-repeat: no-repeat;
          background-attachment: fixed;
          background-image: linear-gradient(rgba(250, 250, 250, 0.35), rgba(250, 250, 250, 0.35)), url(images/878630.jpg);
-         background-size: cover;
-         background-repeat: no-repeat;
          background-origin: all;
-         font-family: sans-serif;
-
+       
       }
 
       * {
@@ -117,7 +114,7 @@
 
       li {
          display: inline-block;
-         font-family: Roboto;
+         font-family: Lato;
          font-size: 20px;
          padding: 20px 8px 20px 8px;
          margin-top: 25px;
@@ -140,11 +137,11 @@
 <body>
    <h1> <?php echo $login_session; ?></h1>
    <h2 style="float:right;"><a href="logout1.php">Sign Out</a></h2>
-
+ <div class="myForm1">
 
    <form action="addflight.php" method="post" class="form-container">
 
-      <div class="myForm1">
+     
          <pre>
    FLIGHT ID: 
    <input type="text" name="flightID" required><br>
@@ -175,16 +172,17 @@
    PRICE:  
    <input type="text" name="price" required><br>
    <button type="submit" name="submit" class="btn">ADD FLIGHT</button>
+      </pre>
    
-   <form method="post" action="details.php">
+   </form>
+   
+   <form method="post" action="details.php" class="form-container">
    <h1>CHECK BOOKINGS FOR:</h1><input type="text" name="flightID" required><br>
    <button type="submit" name="checkbook" class="btn">CHECK BOOKING</button>
    </form>
-      </pre>
+   
+</div>
 
-   </form>
-
-   </div>
 </body>
 
 </html>
