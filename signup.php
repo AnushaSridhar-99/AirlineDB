@@ -8,6 +8,7 @@ include 'connection.php';
  $firstname = $_POST["firstname"];
  $lastname = $_POST["lastname"];
  $contact = $_POST["contact"];
+ $email = $_POST["email"];
 
 //store query in a variable
  $query = "select * from users where username ='$username'";
@@ -24,7 +25,7 @@ include 'connection.php';
  	echo "user already exists";
  }
  else{
- 	$query1 = "insert into users(username, password, Fname, Lname, Contact) values ('$username', '$password', '$firstname', '$lastname', '$contact')";
+ 	$query1 = "insert into users(username, password, Fname, Lname, Contact, email) values ('$username', '$password', '$firstname', '$lastname', '$contact', '$email')";
  	$exec1 = mysqli_query($conn,$query1);
  	echo "user created";
  }

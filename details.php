@@ -34,3 +34,43 @@
 	
   }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+ 
+  <title>Booking Details</title>
+  <style>
+    *{
+      font-family: Lato;
+    }
+    body{
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-image:linear-gradient(rgba(250,250,250,0.6),rgba(250,250,250,0.6)) ,url(images/408134.jpg);
+    }
+    td{
+      border:0.2px solid black;
+      padding: 10px;
+    }
+    table{
+      padding: 5px;
+      width: 70%;
+      text-align: center;
+      
+
+    }
+    p{
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+
+    }
+  </style>
+</head>
+<body>
+
+</body>
+</html>

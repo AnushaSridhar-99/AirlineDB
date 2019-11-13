@@ -6,8 +6,7 @@
 	$des_place = $_POST['to'];
 	$date = $_POST['depdate'];
 
-
-	$query = "select * from flights where departure = '$dep_place' and destination = '$des_place' and Date = '$date'	";
+	$query = "select * from flights where departure = '$dep_place' and destination = '$des_place' and Date = '$date' order by Price asc";
 	$result= mysqli_query($conn, $query);
 
 
@@ -21,7 +20,6 @@
 		echo '<th>Destination</th>';
 		echo '<th>Date</th>';
 		echo '<th>Time</th>';
-		echo '<th>Capacity</th>';
 		echo '<th>Price</th>';
 		echo '</tr>';
 		while($row=mysqli_fetch_assoc($result))
@@ -32,7 +30,6 @@
         	echo '<td>'.$row['destination'].'</td>';
         	echo '<td>'.$row['Date'].'</td>';
         	echo '<td>'.$row['Time'].'</td>';
-        	echo '<td>'.$row['Capacity'].'</td>';
         	echo '<td>'.$row['Price'].'</td>';
         	echo '<td><a href="login.php">BOOK TICKETS</a></td>';
         	echo '</tr>';

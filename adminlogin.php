@@ -30,121 +30,112 @@
 
 <head>
    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+   <meta charset="utf-8" meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <title>Login Page</title>
 
    <style type="text/css">
-      body {
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-origin: all;
-         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/408200.jpg);
-         font-family: Arial, Helvetica, sans-serif;
-         font-size: 14px;
-      }
+      body{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-origin: all;
+            font-family: sans-serif;
+            background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(images/408200.jpg);
+         }
 
-      * {
+         *{
 
-         font-family: 'Lato', sans-serif;
-      }
+          font-family: 'Lato', sans-serif;;
 
-      label {
-         font-weight: bold;
-         width: 100px;
-         font-size: 14px;
-      }
+         }
+.form-container {
+  max-width: 500px;
+  padding: 70px;
+  
+}
+.form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.form-container .btn {
+  background-color: #2ECC71;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 38%;
+  font-size: 15px;
+}
+.signup{
+  
+  font-family: Lato;
+  font-size: 25px;
+  
+}
+.form-container .btn:hover{
+  color: black;
+}
+#myForm1{
+  margin-left: 320px;
+  text-align: center;
+}
+.para{
+  font-size: 65.5px;
+  margin-left: 30px;
+  color: #D9D9D9;
+}
+.col-md-5{
+  border-bottom: 1px solid white;
+}
+.col-md-7{
+  border-bottom: 1px solid white;
 
-      .box {
-         border: #666666 solid 1px;
-      }
-
-      .form-container {
-         max-width: 500px;
-         padding: 70px;
-         margin-top: 20px;
-
-      }
-
-      .form-container input[type=text] {
-         width: 100%;
-         padding: 15px;
-         margin: 5px 0 22px 0;
-         border: none;
-         background: #f1f1f1;
-         border-radius: 5px;
-      }
-
-      .form-container input[type=password] {
-         width: 100%;
-         padding: 15px;
-         margin: 5px 0 22px 0;
-         border: none;
-         background: #f1f1f1;
-         border-radius: 5px;
-      }
-
-      .form-container .btn {
-         background-color: #2ECC71;
-         color: white;
-         padding: 12px 20px;
-         border: none;
-         border-radius: 5px;
-         cursor: pointer;
-         width: 38%;
-         font-size: 15px;
-      }
-
-      .signup {
-
-         font-family: Lato;
-         font-size: 25px;
-
-      }
-
-      .form-container .btn:hover {
-         color: black;
-      }
-
-      #myForm1 {
-         margin-left: 250px;
-         text-align: center;
-      }
-
-      .para {
-         font-size: 85px;
-         margin-left: 30px;
-         color: #D9D9D9;
-      }
-
-      li {
-         display: inline-block;
-         font-family: Roboto;
-         font-size: 20px;
-         padding: 20px 8px 20px 8px;
-         margin-top: 25px;
-      }
-
-      a {
-         color: #D9D9D9;
-      }
-
-      b {
-         font-family: Lato;
-      }
+}
+    li{
+  display: inline-block;
+  font-family: Roboto;
+  font-size: 20px;
+  padding: 20px 10px 20px 10px;
+  margin-top: 25px;
+}
+a{
+  color: #D9D9D9;
+  text-decoration: none;
+}
+b{
+  font-family: Lato;
+}
    </style>
 
 </head>
 
 <body>
-   <div class="col-md-6" align="margin-left">
+   <div class="col-md-5" align="margin-left">
       <p class="para">AVION</p>
    </div>
-   <div class="col-md-6" align="margin-left">
+   <div class="col-md-7" align="margin-left">
       <ul>
          <li><a href="homepage.html">Home</a></li>
          <li><a href="offers.html">Offers</a></li>
          <li><a href="contact.html">Contact</a></li>
-         <li><a href="services.html">Services</a></li>
-         <li style="color: #D0D3D4; font-family: Lato;">Login</li>
+         <li><a href="pnr.html">View Tickets</a></li>
+         <li><a href="login.php">Login</a></li>
+         <li style="color: #D0D3D4; font-family: Lato; text-decoration: underline;">Admin</li>
 
       </ul>
    </div>

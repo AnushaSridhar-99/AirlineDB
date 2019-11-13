@@ -37,7 +37,7 @@ button,a{
 .button2 {background-color: #008CBA;} /* Blue */
 
 .para {
-      font-size: 85px;
+      font-size: 65.5px;
       margin-left: 30px;
       color: black;
     }
@@ -58,22 +58,34 @@ button,a{
 <th>Gender</th> 
 <th>Flight ID</th>
 <th>PNR Number</th>
+<th>Date</th>
+<th>Time</th>
 </tr>
 <?php
     include 'connection.php';
     $pnr = $_POST['pnrnum'];
-    $sql = "SELECT * FROM passengers WHERE PNRNumber = $pnr";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
+    // $sql = "SELECT * FROM passengers WHERE PNRNumber = '$pnr'";
+    // $result = mysqli_query($conn, $sql);
+    // $num_rows = mysqli_num_rows($result);
+    // $row = mysqli_fetch_assoc($result);
+    // $flightID = $row["flightID"];
+
+    $query = "SELECT * FROM passengers JOIN flights ON passenger.'PNRNumber' = $pnr";
+    $result = mysqli_query($conn, $query);
+     $num_rows = mysqli_num_rows($result);
+     $row = mysqli_fetch_assoc($result);
+
+
+    if ($num_rows > 0) {
 // output data of each row
-while($row = $result->fetch_assoc()) {
-echo "<tr><td> " . $row["name"]. "</td><td>" . $row["age"] . "</td><td>".$row["gender"]. "</td><td>".$row["flightID"]. "</td><td>". $row["PNRNumber"]. "</td>" ;
-}
-echo "</table>";
-} 
-else {
-     echo "<script> alert('Go Away Hacker')
-     window.location.href='pnr.html';</script>";
+      while($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td> " . $row["name"]. "</td><td>" . $row["age"] . "</td><td>".$row["gender"]. "</td><td>".$row["flightID"]. "</td><td>". $row["PNRNumber"]. "</td><td>".$row["Date"]. "</td><td>".$row["Time"] ;
+      }
+      echo "</table>";
+    } 
+    else {
+       echo "<script> alert('Go Away Hacker')
+           window.location.href='pnr.html';</script>";
      
     }
 $conn->close();
