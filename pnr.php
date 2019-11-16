@@ -74,7 +74,7 @@ echo "<tr><td> " . $row["name"]. "</td><td>" . $row["age"] . "</td><td>".$row["g
 echo "</table>";
 } 
 else {
-     echo "<script> alert('Go Away Hacker')
+     echo "<script> alert('Enter valid details');
      window.location.href='pnr.html';</script>";
      
     }
@@ -82,7 +82,7 @@ $conn->close();
 ?>
 </table>
 <button class="button button2" onclick="window.print();return false;" >Print Ticket</button>
-<button class="button"><a href="homepage.html">Homepage</a></button>
+<button class="button"><a href="homepage.php">Homepage</a></button>
 
     
 

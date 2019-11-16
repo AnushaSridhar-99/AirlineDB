@@ -15,7 +15,7 @@
 		echo '<th>Username</th>';
 		echo '<th>Ticket count</th>';
 		echo '<th>Price</th>';
-		echo '<th>Seat numbers</th>';
+		
 		echo '</tr>';
 		while($row=mysqli_fetch_assoc($exec))
     	{
@@ -24,7 +24,7 @@
         	echo '<td>'.$row['username'].'</td>';
         	echo '<td>'.$row['no_of_tickets'].'</td>';
         	echo '<td>'.$row['price'].'</td>';
-        	echo '<td>'.$row['seatnumbers'].'</td>';
+        	
         	echo '</tr>';
     	}
     	

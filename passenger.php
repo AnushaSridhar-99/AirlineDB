@@ -1,5 +1,5 @@
 <?php
-session_start();
+include 'session.php';
 	include 'connection.php';
 
 
@@ -20,7 +20,7 @@ session_start();
 	$row = mysqli_fetch_assoc($exec1);
 	$FlightID = $row["flightID"];
 
-	$query1 = "insert into passengers (flightID, name, age, gender, contact) values('$FlightID', '$name', '$age', '$gender', '$contact')";
+	$query1 = "insert into passengers (flightID, username, name, age, gender, contact) values('$FlightID','$login_session', '$name', '$age', '$gender', '$contact')";
 	$exec = mysqli_query($conn, $query1);
 	if ($exec) {
 		 $message = "Record saved successfully";

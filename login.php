@@ -14,9 +14,10 @@
       $count = mysqli_num_rows($result);
       
       // If result matched $myusername and $mypassword, table row must be 1 row
-		
+    
       if($count == 1) {
          $_SESSION['login_user'] = $myusername;
+         $_SESSION["loggedin"] = $myusername;
          
          header("location: welcome.php");
       }else {
@@ -131,7 +132,7 @@ b{
   <p class="para">AVION</p></div>
   <div class="col-md-7" align="margin-left">
     <ul>
-      <li><a href="homepage.html">Home</a></li>
+      <li><a href="homepage.php">Home</a></li>
       <li><a href="offers.html">Offers</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="pnr.html">View Tickets</a></li>

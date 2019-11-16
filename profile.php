@@ -23,7 +23,7 @@ include 'connection.php';
          background-size: cover;
          background-repeat: no-repeat;
          background-attachment: fixed;
-         background-image: linear-gradient(rgba(250, 250, 250, 0.35), rgba(250, 250, 250, 0.35)), url(images/878630.jpg);
+         background-image: linear-gradient(rgba(250, 250, 250, 0.45), rgba(250, 250, 250, 0.45)), url(images/878630.jpg);
          background-origin: all;
        
       }
@@ -36,7 +36,7 @@ include 'connection.php';
       }
 
       input[type=text]{
-      width: 25%;
+      width: 250px;
       border: 1px solid black;
       border-radius: 3px;
       height: 40px;
@@ -45,7 +45,7 @@ include 'connection.php';
     }
 
       input[type=date] {
-         width: 25%;
+         width: 250px;
       border: 1px solid black;
       border-radius: 3px;
       height: 40px;
@@ -54,7 +54,7 @@ include 'connection.php';
       }
 
       input[type=time] {
-         width: 25%;
+         width: 250px;
       border: 1px solid black;
       border-radius: 3px;
       height: 40px;
@@ -70,10 +70,11 @@ include 'connection.php';
       border: 1px solid black;
       font-size: 15px;
       font-weight: bold;
+
       }
 
       .abcd {
-          width: 25%;
+          width: 250px;
       border: 1px solid black;
       border-radius: 3px;
       height: 40px;
@@ -94,10 +95,12 @@ include 'connection.php';
       text-align: center;
     }
 
-      #myForm1 {
-         margin-left: 500px;
-         text-align: center;
-
+      .myForm1 {
+      border: 1px solid black;
+      width: 42%;
+      padding-bottom: 25px;
+      margin-left: 310px;
+      padding-left: 30px;
       }
 
       .para {
@@ -130,14 +133,14 @@ include 'connection.php';
 <body>
    <h1>Welcome <?php echo $login_session; ?></h1>
    <p class="sign_out"><a style="text-decoration: none; color: black;" href = "logout1.php">Sign Out</a></p>
- <div class="myForm1">
 
-   <form action="addflight.php" method="post">
-      <label style="font-family: Lato; font-size: 27px; margin-left: 30px; font-weight: bold;">ADD FLIGHT</label>
+
+   <form action="addflight.php" method="post" class="myForm1">
+      <label style="font-family: Lato; font-size: 27px; margin-left: 140px; font-weight: bold;">ADD FLIGHT</label>
      
          <pre>
-           <label> FLIGHT ID:</label> <input type="text" name="flightID" required><br>
-     <label> DEPARTURE: </label><select name="dep_place" class="abcd">
+             <label> Flight ID:</label> <input type="text" name="flightID" required><br>
+        <label> Departure: </label><select name="dep_place" class="abcd">
               <option value="">--</option>
               <option value="Bangalore">Bangalore</option>
               <option value="Delhi">Delhi</option>
@@ -145,7 +148,7 @@ include 'connection.php';
               <option value="Gujarat">Gujarat</option>
               <option value="Mumbai">Mumbai</option>
             </select><br>
-<label> DESTINATION:</label> <select name="des_place" class="abcd">
+     <label> Destination:</label> <select name="des_place" class="abcd">
               <option value="">--</option>
               <option value="Bangalore">Bangalore</option>
               <option value="Delhi">Delhi</option>
@@ -153,26 +156,25 @@ include 'connection.php';
               <option value="Gujarat">Gujarat</option>
               <option value="Mumbai">Mumbai</option>
             </select><br> 
-                      <label> DATE: </label><input type="date" name="date" required> <br>
-                        <label>TIME:</label> <input type="time" name="time" required> <br>
-           <label>CAPACITY:</label> <input type="text" name="capacity" required> <br>
-                  <label>   PRICE:</label> <input type="text" name="price" required><br>
-                                <button type="submit" name="submit" class="btn">ADD FLIGHT</button>
+                      <label> Date: </label><input type="date" name="date" required> <br>
+                       <label>Time:</label> <input type="time" name="time" required> <br>
+              <label>Capacity:</label> <input type="text" name="capacity" required> <br>
+                    <label>   Price:</label> <input type="text" name="price" required><br>
+        <button style="margin-left: 150px;" type="submit" name="submit" class="btn">ADD FLIGHT</button>
       </pre>
-   
+    </form>
+   <br><br>
+   <form method="post" action="details.php" class="myForm1">
+  <label style="font-family: Lato; font-size: 27px; margin-left: 110px; font-weight: bold;">CHECK BOOKINGS</label><br><br>
+  <label>Enter Flight ID: </label> <input type="text" name="flightID" required><br><br>
+   <button style=" margin-left: 150px;" type="submit" name="checkbook" class="btn">CHECK BOOKING</button>
    </form>
    <br><br>
-   <form method="post" action="details.php" class="form-container">
-  <label style="font-family: Lato; font-size: 27px; margin-left: 30px; font-weight: bold;">CHECK BOOKINGS</label><br>
-  <input type="text" name="flightID" required><br><br>
-   <button type="submit" name="checkbook" class="btn">CHECK BOOKING</button>
-   </form>
-   <br><br>
-</div>
-  <form action="" method="post">
-    <label style="font-family: Lato; font-size: 27px; margin-left: 30px; font-weight: bold;">DELETE FLIGHT</label><br>
-    <input type="text" name="flightID" required><br><br>
-    <button class="btn" type="submit">Delete</button>
+
+  <form action="" method="post" class="myForm1">
+    <label style="font-family: Lato; font-size: 27px; margin-left: 130px; font-weight: bold;">DELETE FLIGHT</label><br><br>
+    <label>Enter Flight ID: </label> <input type="text" name="flightID" required><br><br>
+    <button style="margin-left: 180px;" class="btn" type="submit">Delete</button>
   </form>
 
 </body>

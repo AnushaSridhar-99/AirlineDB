@@ -22,12 +22,14 @@
  $result = mysqli_num_rows($exec); 
 
  if($result == 1){
- 	echo "flight already exists";
+ 	$message = "Flight already exists";
+		echo "<script type='text/javascript'>alert('$message');</script>"; 
  }
  else{
  	$query1 = "insert into flights(flightID, departure, destination, Date, Time, Capacity, Price) values ('$flightID', '$departure', '$destination', '$date', '$time', '$capacity', '$price')";
  	$exec1 = mysqli_query($conn,$query1);
- 	echo "flight details added successfully";
+ 	$message = "Flight details added successfully";
+		echo "<script type='text/javascript'>alert('$message');</script>"; 
  }	
 }
 

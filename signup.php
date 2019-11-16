@@ -27,6 +27,6 @@ include 'connection.php';
  else{
  	$query1 = "insert into users(username, password, Fname, Lname, Contact, email) values ('$username', '$password', '$firstname', '$lastname', '$contact', '$email')";
  	$exec1 = mysqli_query($conn,$query1);
- 	echo "user created";
+ 	echo "<script>alert('User created'); window.location = './login.php';</script>";
  }
 ?>

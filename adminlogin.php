@@ -8,7 +8,7 @@
       $myadminname = $_POST["adminname"];
       $mypassword = $_POST["password"];
       
-      $sql = "SELECT AdminName FROM admin WHERE AdminName = '$myadminname' and password = '$mypassword'";
+      $sql = "select AdminName FROM admin WHERE AdminName = '$myadminname' and password = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_assoc($result);
       
@@ -130,7 +130,7 @@ b{
    </div>
    <div class="col-md-7" align="margin-left">
       <ul>
-         <li><a href="homepage.html">Home</a></li>
+         <li><a href="homepage.php">Home</a></li>
          <li><a href="offers.html">Offers</a></li>
          <li><a href="contact.html">Contact</a></li>
          <li><a href="pnr.html">View Tickets</a></li>
