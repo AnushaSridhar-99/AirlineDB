@@ -100,10 +100,10 @@
   margin-left: 30px;
   color: #D9D9D9;
 }
-.col-md-5{
+.col-md-4{
   border-bottom: 1px solid white;
 }
-.col-md-7{
+.col-md-8{
   border-bottom: 1px solid white;
 
 }
@@ -128,15 +128,15 @@ b{
    
    <body>
     <div class="navig">
-    <div class="col-md-5" align="margin-left">
+    <div class="col-md-4" align="margin-left">
   <p class="para">AVION</p></div>
-  <div class="col-md-7" align="margin-left">
+  <div class="col-md-8" align="margin-left">
     <ul>
       <li><a href="homepage.php">Home</a></li>
       <li><a href="offers.html">Offers</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="pnr.html">View Tickets</a></li>
-      <li style="color: #D0D3D4; font-family: Lato; text-decoration: underline;">Login</li>
+      <li><a href="mybookings.html">My Bookings</a></li>
       <li><a href="adminlogin.php">Admin</a></li>
      
      </ul>

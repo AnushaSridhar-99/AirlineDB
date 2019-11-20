@@ -160,7 +160,17 @@ include 'session1.php';
               <option value="Gujarat">Gujarat</option>
               <option value="Mumbai">Mumbai</option>
             </select><br> 
-                      <label> Date: </label><input type="date" name="date" required> <br>
+                      <label> Date: </label><input type="date" id="InputDate" name="date" required> <br><script>
+    let dateInput = document.getElementById('InputDate');
+ 
+ const cur_date = new Date();
+ const cur_month = cur_date.getMonth() > 9 ? cur_date.getMonth() + 1 : '0' + (cur_date.getMonth() + 1);
+ const cur_day = cur_date.getDate() > 9 ? cur_date.getDate() : '0' + cur_date.getDate();
+  
+ const dateStr = cur_date.getFullYear() + '-' + cur_month + '-' + cur_day;
+  
+ dateInput.setAttribute('min', dateStr);
+</script>
                        <label>Time:</label> <input type="time" name="time" required> <br>
               <label>Capacity:</label> <input type="text" name="capacity" required> <br>
                     <label>   Price:</label> <input type="text" name="price" required><br>
