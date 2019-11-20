@@ -44,10 +44,10 @@
       width: 25%;
       margin-left: 225px;
     }
-    .col-md-5{
+    .col-md-4{
       border-bottom: 1px solid black;
     }
-    .col-md-7{
+    .col-md-8{
       border-bottom: 1px solid black;
     }
     input[type = date]{
@@ -97,15 +97,15 @@
 	<title>AIRLINE DATABASE</title>
 </head>
 <body>
-  <div class="col-md-5" align="margin-left">
+  <div class="col-md-4" align="margin-left">
   <p class="para">AVION</p></div>
-  <div class="col-md-7" align="margin-left">
+  <div class="col-md-8" align="margin-left">
     <ul>
       <li style="color: black; font-family: Lato; text-decoration: underline;">Home</li>
       <li><a href="offers.html">Offers</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="pnr.html">View Tickets</a></li>
-      <li><a href="login.php">Login</a></li>
+      <li><a href="mybookings.html">My Bookings</a></li>
       <li><a href="adminlogin.php">Admin</a></li>
      
      </ul>
@@ -118,7 +118,7 @@
                 $sql="SELECT distinct departure FROM flights order by departure asc";
               $result=mysqli_query($conn, $sql);
               if($result == FALSE) {
-              die(mysql_error());  
+              die(mysqli_error());  
               }
               ?>
               
@@ -135,7 +135,7 @@
                 $sql="SELECT distinct destination FROM flights order by destination asc";
               $result=mysqli_query($conn, $sql);
               if($result == FALSE) {
-              die(mysql_error());  
+              die(mysqli_error());  
               }
               ?>
            

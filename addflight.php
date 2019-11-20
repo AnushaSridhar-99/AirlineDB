@@ -10,6 +10,12 @@
 	$capacity = $_POST["capacity"];
 	$price = $_POST["price"];
 
+	if($departure == $destination or $departure == "--" or $destination == "--")
+	{
+		echo "<script>alert('Invalid details'); window.location = './profile.php';</script>";
+	}
+	else{
+
 	
 	 $query = "select * from flights where flightID ='$flightID'";
 
@@ -22,15 +28,15 @@
  $result = mysqli_num_rows($exec); 
 
  if($result == 1){
- 	$message = "Flight already exists";
-		echo "<script type='text/javascript'>alert('$message');</script>"; 
+		echo "<script>alert('Flight exists'); window.location = './profile.php';</script>";
  }
  else{
  	$query1 = "insert into flights(flightID, departure, destination, Date, Time, Capacity, Price) values ('$flightID', '$departure', '$destination', '$date', '$time', '$capacity', '$price')";
  	$exec1 = mysqli_query($conn,$query1);
  	$message = "Flight details added successfully";
-		echo "<script type='text/javascript'>alert('$message');</script>"; 
+		echo "<script>alert('Flight details added successfully!'); window.location = './profile.php';</script>";
  }	
+}
 }
 
 ?>

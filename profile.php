@@ -1,6 +1,7 @@
 <?php
 include 'connection.php';
-   include('session1.php');
+include 'session1.php';
+
     if($_SERVER["REQUEST_METHOD"] == "POST") {
    $flightID = $_POST["flightID"];
 
@@ -9,6 +10,9 @@ include 'connection.php';
    if ($exec) {
       $message = "Flight deleted";
     echo "<script type='text/javascript'>alert('$message');</script>"; 
+   }
+   else {
+      echo "<script>alert('error!');</script>"; 
    }
  }
 ?>
@@ -134,14 +138,14 @@ include 'connection.php';
    <h1>Welcome <?php echo $login_session; ?></h1>
    <p class="sign_out"><a style="text-decoration: none; color: black;" href = "logout1.php">Sign Out</a></p>
 
-
+   
    <form action="addflight.php" method="post" class="myForm1">
       <label style="font-family: Lato; font-size: 27px; margin-left: 140px; font-weight: bold;">ADD FLIGHT</label>
      
          <pre>
              <label> Flight ID:</label> <input type="text" name="flightID" required><br>
         <label> Departure: </label><select name="dep_place" class="abcd">
-              <option value="">--</option>
+              <option value="--">--</option>
               <option value="Bangalore">Bangalore</option>
               <option value="Delhi">Delhi</option>
               <option value="Hyderabad">Hyderabad</option>
@@ -149,7 +153,7 @@ include 'connection.php';
               <option value="Mumbai">Mumbai</option>
             </select><br>
      <label> Destination:</label> <select name="des_place" class="abcd">
-              <option value="">--</option>
+              <option value="--">--</option>
               <option value="Bangalore">Bangalore</option>
               <option value="Delhi">Delhi</option>
               <option value="Hyderabad">Hyderabad</option>
@@ -172,9 +176,9 @@ include 'connection.php';
    <br><br>
 
   <form action="" method="post" class="myForm1">
-    <label style="font-family: Lato; font-size: 27px; margin-left: 130px; font-weight: bold;">DELETE FLIGHT</label><br><br>
+    <label style="font-family: Lato; font-size: 27px; margin-left: 110px; font-weight: bold;">CANCEL A FLIGHT</label><br><br>
     <label>Enter Flight ID: </label> <input type="text" name="flightID" required><br><br>
-    <button style="margin-left: 180px;" class="btn" type="submit">Delete</button>
+    <button style="margin-left: 180px;" class="btn" name="submit" type="submit">Confirm</button>
   </form>
 
 </body>

@@ -28,8 +28,7 @@ include 'session.php';
 		header("Location: passDetails.php"); 
      }
 	else {
-		$message = "Record not saved";
-         echo "<script type='text/javascript'>alert('$message');</script>";  
+        echo "<script>alert('Record not saved'); window.location = './welcome.php';</script>"; 
 	}
 	
 }

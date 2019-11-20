@@ -8,16 +8,16 @@ $departure = $_SESSION["departure"];
     $date =  $_SESSION["date"];
     $time = $_SESSION["time"];
 
-$query = "select Price from flights where departure ='$departure' and destination = '$destination' and Date = '$date' and Time = '$time' limit 1";
+$query = "select webprice as (Price*1.05) from flights where departure ='$departure' and destination = '$destination' and Date = '$date' and Time = '$time' limit 1";
     $exec1= mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($exec1);
-    $webprice = $row["Price"];
+    $webprice = $row["webprice"];
 
 // create a coupon code variable in database
 
 $coupon = $_SESSION["couponcode"];
 // 18% gst on webprice
-$newprice = $webprice * 1.05*$_SESSION["number"];
+$newprice = $webprice * $_SESSION["number"];
 $_SESSION["finalprice"] = $newprice;
 
 switch($coupon)
