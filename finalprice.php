@@ -8,10 +8,10 @@ $departure = $_SESSION["departure"];
     $date =  $_SESSION["date"];
     $time = $_SESSION["time"];
 
-$query = "select webprice as (Price*1.05) from flights where departure ='$departure' and destination = '$destination' and Date = '$date' and Time = '$time' limit 1";
+$query = "select Price from flights where departure ='$departure' and destination = '$destination' and Date = '$date' and Time = '$time' limit 1";
     $exec1= mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($exec1);
-    $webprice = $row["webprice"];
+    $webprice = $row["Price"];
 
 // create a coupon code variable in database
 
@@ -76,7 +76,7 @@ switch($coupon)
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-image:linear-gradient(rgba(250,250,250,0.35),rgba(250,250,250,0.35)) ,url(images/878630.jpg);
+      background-image:linear-gradient(rgba(250,250,250,0.45),rgba(250,250,250,0.45)) ,url(images/878630.jpg);
   }
  label{
       font-weight: bold;

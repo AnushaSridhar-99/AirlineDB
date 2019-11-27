@@ -20,9 +20,9 @@
          $_SESSION['login_user'] = $myadminname;
          
          header("location: profile.php");
-      }else {
-         $error = "Your Admin Name or Password is invalid";
-         echo "<script type='text/javascript'>alert('$error');</script>"; 
+      }
+      else {
+         echo "<script>alert('Admin Name or Password is invalid');</script>"; 
       }
    }
 ?>

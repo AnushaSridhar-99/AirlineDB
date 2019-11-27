@@ -19,9 +19,7 @@
 
 	$query1 = "CALL BOOKING('$login_session', '$FlightID', '$num', '$price', '$status', '$payment')";
 	$exec2 = mysqli_query($conn, $query1);
-	$query2 = "update flights set Capacity = Capacity-$num where flightID = '$FlightID'";
-		$exec3 = mysqli_query($conn, $query2); 
-	if ($exec2 and $exec3) {
+	if ($exec2) {
 
 		$sql1 = "select * from passengers where username = '$login_session' and flightID = '$FlightID'";
 		$exec5 = mysqli_query($conn, $sql1);
@@ -74,14 +72,9 @@
 	     } else {
 	       echo "<script>alert('Booking Confirmed'); window.location = './welcome.php';</script>";
 	     }
-			
-
-
      }
 	else {
-		$message = "There is an error";
-         echo "<script type='text/javascript'>alert('$message');</script>";
-         header("Location:welcome.php");  
+         echo "<script>alert('An error occured! Please try again'); window.location = './welcome.php';</script>";  
 	}
 
 ?>
