@@ -11,6 +11,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style>
     body{
@@ -25,8 +26,8 @@
       font-family: Lato;
      }
     .flight{
-      width: 57%;
-      margin-left: 365px;
+      width: 60%;
+      margin-left: 250px;
       margin-top: 40px;
       padding-top: 0px;
       padding-bottom: 0px;
@@ -51,7 +52,7 @@
       border-bottom: 1px solid black;
     }
     input[type = date]{
-      width: 31.3%;
+      width: 30%;
       height: 39px;
       border: 0.5px solid #B9B9BA;
       padding: 10px;
@@ -63,7 +64,7 @@
       border-radius: 5px;
     }
     #city{
-      width: 31.3%;
+      width: 30%;
       height: auto;
       border: 0.5px solid #B9B9BA;
       padding: 10px;
@@ -113,7 +114,7 @@
   
   <br><br><br><br><br>
   <div class="flight">
-    <form style="font-family: Leto" method="post" action="flights.php"><pre style="background: none; border: none; font-weight: bold; font-family: Lato; font-size: 15px;"> FROM:                                                           TO:                                                          DEPARTURE DATE:</pre>   <?php
+    <form style="font-family: Leto" method="post" action="flights.php"><pre style="background: none; border: none; font-weight: bold; font-family: Lato; font-size: 15px;"> FROM:                                                           TO:                                                                      DEPARTURE DATE:</pre>   <?php
                   include 'connection.php' ;
                 $sql="SELECT distinct departure FROM flights order by departure asc";
               $result=mysqli_query($conn, $sql);
@@ -147,6 +148,7 @@
               }
               echo "</select>";
               ?>
+              <img style="width: 20px; height: auto;" src="images/calender.jpg">
               <input id="dateInput" type="date" name="depdate"><br><br>
         <button type="submit" class="btn">CHECK FLIGHTS</button>
     
