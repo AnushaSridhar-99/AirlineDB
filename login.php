@@ -8,7 +8,7 @@
       $myusername = $_POST['username'];
       $mypassword = $_POST['password']; 
       
-      $sql = "SELECT username FROM users WHERE username = '$myusername' and password = '$mypassword'";
+      $sql = "select username from users where username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_assoc($result);
       $count = mysqli_num_rows($result);
@@ -21,8 +21,7 @@
          
          header("location: welcome.php");
       }else {
-         $message = "Invalid username or password!";
-         echo "<script type='text/javascript'>alert('$message');</script>"; 
+         echo "<script>alert('Invalid username or password');</script>"; 
         }
    }
 ?>

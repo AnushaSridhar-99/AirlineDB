@@ -63,7 +63,7 @@ button,a{
 <?php
     include 'connection.php';
     $pnr = $_POST['pnrnum'];
-    $sql = "SELECT * FROM passengers WHERE PNRNumber = $pnr";
+    $sql = "select * from passengers where PNRNumber = $pnr";
 $result = mysqli_query($conn, $sql);
 $num_rows = mysqli_num_rows($result);
 if ($num_rows > 0) {

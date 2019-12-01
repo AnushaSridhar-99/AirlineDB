@@ -12,7 +12,7 @@
 
 	if($departure == $destination or $departure == "--" or $destination == "--")
 	{
-		echo "<script>alert('Invalid details'); window.location = './profile.php';</script>";
+		echo "<script>alert('Enter valid departure and destination'); window.location = './profile.php';</script>";
 	}
 	else{
 
