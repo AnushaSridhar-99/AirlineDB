@@ -22,6 +22,11 @@ include 'session1.php';
    <title>Welcome Admin </title>
    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
+   <meta charset="utf-8" meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
    <style>
       body {
          background-size: cover;
@@ -29,6 +34,7 @@ include 'session1.php';
          background-attachment: fixed;
          background-image: linear-gradient(rgba(250, 250, 250, 0.45), rgba(250, 250, 250, 0.45)), url(images/878630.jpg);
          background-origin: all;
+         color: black;
        
       }
 
@@ -95,10 +101,12 @@ include 'session1.php';
          font-size: 25px;
 
       }
-       h1{
-      text-align: center;
-    }
-
+       .col-md-4{
+            border-bottom: 1px solid black;
+        }
+        .col-md-8{
+              border-bottom: 1px solid black;
+        }
       .myForm1 {
       border: 1px solid black;
       width: 42%;
@@ -108,9 +116,9 @@ include 'session1.php';
       }
 
       .para {
-         font-size: 85px;
+         font-size: 51.5px;
          margin-left: 30px;
-         color: #D9D9D9;
+         margin-top: 20px;
       }
 
       li {
@@ -120,12 +128,7 @@ include 'session1.php';
          padding: 20px 8px 20px 8px;
          margin-top: 25px;
       }
-      .sign_out{
-      margin-top: 20px;
-      margin-left: 900px;
-      font-family: Lato;
-      font-size: 20px;
-    }
+      
     label{
       font-weight: bold;
       font-family: Lato;
@@ -135,16 +138,27 @@ include 'session1.php';
 </head>
 
 <body>
-   <h1>Welcome <?php echo $login_session; ?></h1>
-   <p class="sign_out"><a style="text-decoration: none; color: black;" href = "logout1.php">Sign Out</a></p>
 
+  <div class="navig">
+    <div class="col-md-8" align="margin-left">
+  <p class="para">Welcome <?php echo $login_session; ?></p></div>
+  <div class="col-md-4" align="margin-left">
+    <ul>
+      <li><a style="text-decoration: none; color: black;" href="allflights.php">Flights</a></li>
+      <li><a style="text-decoration: none; color: black;" href = "logout1.php">Sign Out</a></li>
+     
+     </ul>
+  </div>
+</div>
+   
+   <br><br><br><br><br><br><br>
    
    <form action="addflight.php" method="post" class="myForm1">
       <label style="font-family: Lato; font-size: 27px; margin-left: 140px; font-weight: bold;">ADD FLIGHT</label>
      
-         <pre>
-             <label> Flight ID:</label> <input type="text" name="flightID" required><br>
-        <label> Departure: </label><select name="dep_place" class="abcd">
+         <pre style="background: none; border: none; font-family: Lato; color: black;">
+           <label> Flight ID: </label> <input type="text" name="flightID" required><br>
+      <label>Departure:  </label><select name="dep_place" class="abcd">
               <option value="--">--</option>
               <option value="Bangalore">Bangalore</option>
               <option value="Delhi">Delhi</option>
@@ -152,7 +166,7 @@ include 'session1.php';
               <option value="Gujarat">Gujarat</option>
               <option value="Mumbai">Mumbai</option>
             </select><br>
-     <label> Destination:</label> <select name="des_place" class="abcd">
+   <label>Destination: </label> <select name="des_place" class="abcd">
               <option value="--">--</option>
               <option value="Bangalore">Bangalore</option>
               <option value="Delhi">Delhi</option>
@@ -160,7 +174,7 @@ include 'session1.php';
               <option value="Gujarat">Gujarat</option>
               <option value="Mumbai">Mumbai</option>
             </select><br> 
-                      <label> Date: </label><input type="date" id="InputDate" name="date" required> <br><script>
+                       <label>Date:  </label><input type="date" id="InputDate" name="date" required> <br><script>
     let dateInput = document.getElementById('InputDate');
  
  const cur_date = new Date();
@@ -171,10 +185,10 @@ include 'session1.php';
   
  dateInput.setAttribute('min', dateStr);
 </script>
-                       <label>Time:</label> <input type="time" name="time" required> <br>
-              <label>Capacity:</label> <input type="text" name="capacity" required> <br>
-                    <label>   Price:</label> <input type="text" name="price" required><br>
-        <button style="margin-left: 150px;" type="submit" name="submit" class="btn">ADD FLIGHT</button>
+                        <label>Time: </label> <input type="time" name="time" required> <br>
+             <label>Capacity: </label> <input type="text" name="capacity" required> <br>
+                        <label>Price: </label> <input type="text" name="price" required><br>
+  <button style="margin-left: 150px;" type="submit" name="submit" class="btn">ADD FLIGHT</button>
       </pre>
     </form>
    <br><br>
@@ -190,7 +204,6 @@ include 'session1.php';
     <label>Enter Flight ID: </label> <input type="text" name="flightID" required><br><br>
     <button style="margin-left: 180px;" class="btn" name="submit" type="submit">Confirm</button>
   </form>
-
 </body>
 
 </html>
