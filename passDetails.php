@@ -58,7 +58,7 @@ if($_SESSION["numOfPassengers"] == 0)
 
    	<form action="passenger.php" method="post" class="pass">
     <pre>
-        <!-- Passenger <?php $counter ?> details: -->
+        <!-- Passenger details: -->
                  <label style="text-align: center;">PASSENGER DETAILS</label><br>
        <label> Name:</label>  <input type="text" name="name" required><br>
          <label> Age:</label>  <input type="text" name="age" required><br><br>
